@@ -13,7 +13,7 @@ def tile_slicer(im, shape):
     div = im_shape / des_shape
     for i in range(len(div)):
         div[i] = math.ceil(div[i])
-    print(div)
+    #print(div)
     for i in div: # Ends the function if the tile size is greater than the image
         if i < 1:
             print('The specified tile size is larger than the image.')
@@ -36,6 +36,12 @@ def tile_slicer(im, shape):
             #print(f'{vl}:{vh}')
             #print(f'{hl}:{hh}')
             subset = im[vl:vh, hl:hh]
-            tile_dict[location] = subset
+            if np.shape(subset) == shape:
+                tile_dict[location] = subset
+            else:
+                #print('Desired Shape', shape)
+                new_subset = universal_padding(subset, shape, False, True, False, True) #pads the bottom
+                #print('Actual Shape', np.shape(new_subset))
+                tile_dict[location] = new_subset
             
     return tile_dict
