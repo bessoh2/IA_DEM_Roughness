@@ -8,8 +8,9 @@ Using Image Analysis techniques to identify pixels of a DEM with low surface rou
 ## tile_slicer
 
 **tile_slicer(image, shape)**
-  Divides a given image into uniform tiles (except for at the edges) of specified shape. Returns the tiles in a dictionary with the location of each
-  of the tiles as keys and the tiles as values.
+
+  """Divides a given image into uniform tiles (except for at the edges) of specified shape. Returns the tiles in a dictionary with the location of each
+  of the tiles as keys and the tiles as values."""
   
   **Parameters:** 
                   
@@ -33,7 +34,8 @@ Using Image Analysis techniques to identify pixels of a DEM with low surface rou
 ## tif_stitch
 
 **tif_stitch(tiles, saved_locs, im_shape)**
-  Takes the outputs from tile_slicer and stitches the image back together.
+  
+  """Takes the outputs from tile_slicer and stitches the image back together."""
   
   **Parameters:**
   
