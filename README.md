@@ -4,6 +4,7 @@ Using Image Analysis techniques to identify pixels of a DEM with low surface rou
 ## Project Goals
 * Learn about the posibilities of image analysis techniques for use with satellite data
 * Create a computationally efficient moving window function for use on large images
+* Develop a tiling and stitching function to reduce the size of the image being worked on while preserving the original location of each tile
 * Identify areas of low slope and low surface roughness for use with ICESat-2 satellite data
 
 # Function Documentation
