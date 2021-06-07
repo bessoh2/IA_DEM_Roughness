@@ -21,7 +21,8 @@ Using Image Analysis techniques to identify pixels of a DEM with low surface rou
 
   **Short Summary:**
 
-    Divides a given image into uniform tiles (except for at the edges) of specified shape. Returns the tiles in a dictionary with the location of each
+    Divides a given image into uniform tiles (except for at the edges) of specified shape. 
+    Returns the tiles in a dictionary with the location of each
     of the tiles as keys and the tiles as values.
   
   **Parameters:** 
