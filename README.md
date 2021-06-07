@@ -51,8 +51,8 @@ Using Image Analysis techniques to identify pixels of a DEM with low surface rou
   **Examples:**
   
      >>> im = [a 5000x5000 image stored as an array]
-     >>> tiles, locs, shape = tile_slicer(im, (500,500))
-     >>> print(tiles)
+     >>> tile_dict, saved_locs, im_shape = tile_slicer(im, (500,500))
+     >>> print(tile_dict)
      {(1, 1): <xarray.DataArray (y: 500, x: 500)>
      array([[2211.215 , 2212.88  , 2213.9575, ..., 2928.8174, 2930.355 , 2931.82  ],
        [2212.0874, 2213.885 , 2214.6226, ..., 2929.85  , 2931.65  , 2932.6226],
@@ -62,9 +62,9 @@ Using Image Analysis techniques to identify pixels of a DEM with low surface rou
        [2526.25  , 2526.345 , 2526.0024, ..., 2780.7576, 2780.725 , 2780.845 ],
        [2525.36  , 2525.6875, 2525.78  , ..., 2780.6375, 2780.8875, 2780.9824]],
       dtype=float32)...
-      >>> print(locs)
+     >>> print(saved_locs)
       {(1, 1): [0, 500, 0, 500], (1, 2): [500, 1000, 0, 500]...
-      >>> print(shape)
+     >>> print(im_shape)
       [5000 5000]
      
                   
@@ -92,6 +92,8 @@ Using Image Analysis techniques to identify pixels of a DEM with low surface rou
                     
   **Examples:**
   
-    >>> im = [an image stored as an array]
-    >>> 
+    >>> im = tif_stitch(tile_dict, saved_locs, im_shape)
+    >>> np.shape(im)
+    (5000, 5000)
+    
     
