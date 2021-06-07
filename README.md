@@ -15,10 +15,6 @@ Using Image Analysis techniques to identify pixels of a DEM with low surface rou
 
 # Function Documentation
 
-## Image Slice and Stitch Goals
-- Create a function that can slice an image into however many tiles of specified shape to reduce computing power for image analysis
-- Create a function that will successfully stitch the tiles back together post-analysis into an image the same size as the original shape
-
 ## tile_slicer
 
 **tile_slicer(image, shape)**
