@@ -1,6 +1,8 @@
 ## tile_slicer
 
-"""**tile_slicer(image, shape)**
+"""
+
+**tile_slicer(image, shape)**
 
   **Short Summary:**
 
@@ -77,7 +79,9 @@
   
     >>> im = tif_stitch(tile_dict, saved_locs, im_shape)
     >>> np.shape(im)
-    (5000, 5000)"""
+    (5000, 5000)
+    
+"""
 
 
 def tile_slicer(im, shape):
