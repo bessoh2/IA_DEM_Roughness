@@ -1,20 +1,19 @@
-## tile_slicer
-
 """
+Function Documentation:
 
-**tile_slicer(image, shape)**
+tile_slicer(image, shape)
 
-  **Short Summary:**
+  Short Summary:
 
     Slices an image into tiles of specified shape.
     
-  **Extended Summary:**
+  Extended Summary:
   
     Divides a given image into uniform tiles (except for at the edges) of specified shape. 
     Returns the tiles in a dictionary with the location of each
     of the tiles as keys and the tiles as values.
   
-  **Parameters:** 
+  Parameters:
                   
                   image : array_like
                     Input image.
@@ -22,7 +21,7 @@
                   shape : tuple of ints
                     Desired tile size as a two dimensional shape.
                     
-  **Returns:**  
+  Returns:
   
                tile_dict : dictionary (keys : tuple of ints; values : array_like)
                   The keys are the original tile locations with the origin as the top left corner, and the values are the tiles.
@@ -33,7 +32,7 @@
                im_shape : tuple of ints
                   The shape of the original image.
                   
-  **Examples:**
+  Examples:
   
      >>> im = [a 5000x5000 image stored as an array]
      >>> tile_dict, saved_locs, im_shape = tile_slicer(im, (500,500))
@@ -53,13 +52,13 @@
       [5000 5000]
      
                   
-## tif_stitch
+tif_stitch
 
-**tif_stitch(tiles, saved_locs, im_shape)**
+tif_stitch(tiles, saved_locs, im_shape)
   
   Takes the outputs from tile_slicer and stitches the image back together.
   
-  **Parameters:**
+  Parameters:
   
                   tiles : dictionary (keys : tuple of ints; values : array_like)
                   The keys are the original tile locations with the origin as the top left corner, and the values are the tiles.
@@ -70,12 +69,12 @@
                   im_shape : tuple of ints
                   The shape of the original image.
                   
-  **Returns:**
+  Returns:
   
                   stitched_im : array_like
                     The stitched image.
                     
-  **Examples:**
+  Examples:
   
     >>> im = tif_stitch(tile_dict, saved_locs, im_shape)
     >>> np.shape(im)
